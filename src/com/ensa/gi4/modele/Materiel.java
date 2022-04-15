@@ -1,9 +1,30 @@
 package com.ensa.gi4.modele;
 
 public abstract class Materiel {
-    private String name;
+	
+	protected int id;
+    protected String name;
+    
 
-    public String getName() {
+    public Materiel() {
+
+    }
+
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Materiel(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public String getName() {
         return name;
     }
 
