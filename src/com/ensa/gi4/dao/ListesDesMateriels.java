@@ -13,11 +13,8 @@ public class ListesDesMateriels {
 	public ListesDesMateriels() {
 		
 		L.add(new Livre(1,"LIVRE 1"));
-		L.add(new Livre(2,"LIVRE 2"));
-		
-		
 		L.add(new Chaise(1, "CHAISE 1"));
-		L.add(new Chaise(1, "CHAISE 2"));
+
 	}
 
 	public ArrayList<Materiel> getL() {

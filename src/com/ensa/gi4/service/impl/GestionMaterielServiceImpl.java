@@ -1,17 +1,16 @@
 package com.ensa.gi4.service.impl;
 
 import com.ensa.gi4.dao.MaterielDAO;
+import com.ensa.gi4.dao.MaterielDAOImpl;
 import com.ensa.gi4.modele.Materiel;
 import com.ensa.gi4.service.api.GestionMaterielService;
 
 public class GestionMaterielServiceImpl implements GestionMaterielService {
     
-	public MaterielDAO materielDAO;
+	public MaterielDAOImpl materielDAO;
+
 	
-	
-	
-	
-    public GestionMaterielServiceImpl(MaterielDAO materielDAO) {
+    public GestionMaterielServiceImpl(MaterielDAOImpl materielDAO) {
 		
     	this.materielDAO = materielDAO;
 	}

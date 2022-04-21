@@ -11,6 +11,7 @@ public class GestionMaterielController {
     private GestionMaterielService gestionMaterielService;
 
     public void listerMateriel() {
+
         gestionMaterielService.listerMateriel();
     }
 
