@@ -20,6 +20,7 @@ public class GestionMaterielController {
         System.out.println("2- pour ajouter un nouveau matériel, entrer 2");
         System.out.println("3- pour supprimer un materiel, entrer 3");
         System.out.println("4- pour modifier un materiel, entrer 4");
+        System.out.println("5- pour rechercher un materiel, entrer 5");
         System.out.println("0- pour sortir de l'application, entrer 0");
         
         Scanner scanner = new Scanner(System.in);
@@ -48,7 +49,13 @@ public class GestionMaterielController {
             id = scanner.nextInt();
             
             gestionMaterielService.modifierMateriel(id, name);
-		}else {
+		}else if ("5".equals(next)){
+            String name;
+            name = scanner.next();
+
+            gestionMaterielService.rechercherMateriel(name);
+        }
+        else {
             System.out.println("choix invalide");
         }
     }

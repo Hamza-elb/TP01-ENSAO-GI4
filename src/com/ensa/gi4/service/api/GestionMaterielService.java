@@ -8,5 +8,5 @@ public interface GestionMaterielService {
     void ajouterNouveauMateriel(Materiel materiel);
     void supprimerMateriel(int id);
     void modifierMateriel (int id, String name);
-    Materiel rechercherMateriel (Materiel materiel);
+    void rechercherMateriel (String name);
 }

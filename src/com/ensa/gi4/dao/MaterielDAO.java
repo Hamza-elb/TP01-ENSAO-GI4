@@ -7,7 +7,7 @@ public interface MaterielDAO {
 	
 	void ListerMaterielDAO();
 	
-    Materiel RechercheDAO(Materiel materiel);
+    void RechercheDAO(String name);
     
     void AjouterMaterielDAO(Materiel materiel);
     

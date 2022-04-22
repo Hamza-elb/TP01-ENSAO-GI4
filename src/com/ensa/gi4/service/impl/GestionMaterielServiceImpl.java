@@ -47,8 +47,8 @@ public class GestionMaterielServiceImpl implements GestionMaterielService {
 	}
 
 	@Override
-	public Materiel rechercherMateriel(Materiel materiel) {
+	public void rechercherMateriel(String name) {
 		
-		return materielDAO.RechercheDAO(materiel);
+		materielDAO.RechercheDAO(name);
 	}
 }

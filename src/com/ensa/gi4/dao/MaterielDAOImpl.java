@@ -11,7 +11,8 @@ public class MaterielDAOImpl implements MaterielDAO {
 	 private MaterielDAOImpl materiel_dao_impl = null;
 
     public MaterielDAOImpl(ListesDesMateriels listesDesMateriels) {
-       this.listesDesMateriels = listesDesMateriels;
+
+    	this.listesDesMateriels = listesDesMateriels;
     }
 
     @Override
@@ -25,9 +26,21 @@ public class MaterielDAOImpl implements MaterielDAO {
 	}
 
 	@Override
-	public Materiel RechercheDAO(Materiel materiel) {
-		// TODO Auto-generated method stub
-		return null;
+	public void RechercheDAO(String name) {
+
+		boolean resultat = false;
+		for (int i = 0; i < listesDesMateriels.getL().size(); i++) {
+			if(listesDesMateriels.getL().get(i).getName().equals(name)){
+				resultat = true;
+			}
+
+		}
+		if(resultat){
+			System.out.println(name+" est sur la liste");
+		}
+		else{
+			System.out.println(name+" n'existe pas");
+		}
 	}
 
 	@Override
