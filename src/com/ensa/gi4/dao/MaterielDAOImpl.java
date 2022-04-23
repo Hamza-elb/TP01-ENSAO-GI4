@@ -3,10 +3,13 @@ package com.ensa.gi4.dao;
 import java.util.ArrayList;
 
 import com.ensa.gi4.modele.Materiel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MaterielDAOImpl implements MaterielDAO {
-	
-	 ListesDesMateriels listesDesMateriels;
+	@Autowired
+	public ListesDesMateriels listesDesMateriels;
 
 	 private MaterielDAOImpl materiel_dao_impl = null;
 

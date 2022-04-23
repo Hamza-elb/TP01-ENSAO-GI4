@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import com.ensa.gi4.modele.Chaise;
 import com.ensa.gi4.modele.Livre;
 import com.ensa.gi4.modele.Materiel;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ListesDesMateriels {
 	
 	public ArrayList<Materiel> L = new ArrayList<Materiel>();
