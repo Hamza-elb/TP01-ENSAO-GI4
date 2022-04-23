@@ -17,6 +17,8 @@ public class MaterielDAOImpl implements MaterielDAO {
 
     	this.listesDesMateriels = listesDesMateriels;
     }
+	public MaterielDAOImpl( ) {
+	}
 
     @Override
 	public void ListerMaterielDAO() {
