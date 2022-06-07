@@ -2,9 +2,15 @@ package com.ensa.gi4.dao;
 
 import com.ensa.gi4.modele.Materiel;
 
+import java.util.List;
+
 public interface MaterielDAO {
-	
-	
+
+    List<Materiel> findAll();
+
+    Materiel findOne(Long id);
+
+
 	void ListerMaterielDAO();
 	
     void RechercheDAO(String name);

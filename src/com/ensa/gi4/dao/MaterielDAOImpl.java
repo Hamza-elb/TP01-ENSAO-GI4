@@ -1,13 +1,17 @@
 package com.ensa.gi4.dao;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.ensa.gi4.modele.Materiel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
-public class MaterielDAOImpl implements MaterielDAO {
+import javax.swing.tree.RowMapper;
+
+
+@Repository
+public class MaterielDAOImpl extends GenericDAO<Materiel> implements MaterielDAO {
 	@Autowired
 	public ListesDesMateriels listesDesMateriels;
 
@@ -20,7 +24,17 @@ public class MaterielDAOImpl implements MaterielDAO {
 	public MaterielDAOImpl( ) {
 	}
 
-    @Override
+	@Override
+	public List<Materiel> findAll() {
+		return super.findAll("SELECT * FROM MATERIEL;");
+	}
+
+	@Override
+	public Materiel findOne(Long id) {
+		return super.findOne("SELECT * FROM MATERIEL WHERE ID=?;", id);
+	}
+
+	@Override
 	public void ListerMaterielDAO() {
 		
 		ArrayList<Materiel> l = listesDesMateriels.getL();
@@ -76,4 +90,9 @@ public class MaterielDAOImpl implements MaterielDAO {
 	        }
 	    }
 
+
+	@Override
+	protected RowMapper getRowMapper() {
+		return null;
+	}
 }
